@@ -1,0 +1,19 @@
+
+
+1.搜src= ，找到如下
+ <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+ 将此句替换为：
+  <script type="text/javascript" src="./charts/loader.js"></script>
+ 
+2.在第一句紧邻的google.load("visualization", "1.1", {packages:["corechart"]}); 替换为
+ google.charts.load('current', {'packages':['corechart']}); 
+  
+3.将生成的html放置于charts文件夹
+  
+  
+ 参考如下：
+        <!-- script type="text/javascript" src="https://www.google.com/jsapi"></script -->
+		<script type="text/javascript" src="./charts/loader.js"></script>
+		<script type="text/javascript">
+		//google.load("visualization", "1.1", {packages:["corechart"]});
+            google.charts.load('current', {'packages':['corechart']});
